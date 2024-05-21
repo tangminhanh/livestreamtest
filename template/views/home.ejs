@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <title>Trillium Media Design</title>
+        <meta charset="utf-8">
+        <style>
+            ul {
+                list-style-image: url(trillium.gif)
+            }
+
+            img {
+                border-style: none;
+            }
+                   .nav-item:hover a {
+            color: red;}
+            .block-mc-content-detail {
+                background-color: #d5edb3; 
+            }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .main {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 5px auto;
+            max-width: 2000px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .block {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .block h1 {
+            color: #333;
+        }
+        .media-object {
+            display: flex;
+            flex-flow: wrap;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+                align-items: center; /* Align items vertically */
+
+        }
+
+        .block p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .media-object-vid {
+            max-width: 80%;
+            margin-right: 5px;
+        }
+
+
+<!-- .media-object-content {
+    flex-grow: 1; /* Allow content to grow and take available space */
+} -->
+
+         #videoContainer {
+        margin: 20px auto;
+        max-width: 1800px;
+        /* Increased max-width for side-by-side layout */
+        display: flex;
+        flex-direction: row;
+        /* Arrange children horizontally */
+        justify-content: space-between;
+        /* Distribute space between children */
+        align-items: center; 
+        /* Center children vertically */
+      }
+
+    </style>
+        
+    </head>
+
+    <body>
+        
+        <ul class="nav ">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Top Stories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Latest News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Discover</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Singapore</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Asia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CNA Insider</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Watch</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">listen</a>
+            </li>
+            
+        </ul>
+        
+        <div class="main">
+            <div class="container">
+            <div class=" block block-mc-content-detail text-center align-bottom">
+                <h1 class="h1">Watch</h1>
+                    <p> Basic Video Streaming 
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="container block">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div id="videoContainer" class="row">
+                            <h3>Stream From Local</h3>
+                            <video id="videoPlayer2" controls muted="muted" autoplay>
+                                <source src="/video2" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <h2>Brightcove VideoCloud</h2>
+                            <div class="row">
+                                <!-- First Video -->
+                                <div class="col-md-6">
+                                    <a href="/views/rand.ejs">
+                                        <img class="media-object-vid"
+                                            src="https://onecms-res.cloudinary.com/image/upload/s--NlshlvbR--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2024/01/16/untitled_1.png?itok=GEt6GSiQ">
+                                    </a>
+                                    <div class="col-md-8">
+                                        <h6> Video</h6>
+                                    </div>
+                                    <video-js id="myPlayerID" data-account="6100381025001" data-player="default"
+                                        data-embed="default" controls="" data-video-id="6344739570112" data-playlist-id=""
+                                        data-application-id="" width="960" height="540" class="vjs-fluid"></video-js>
+                                    <script
+                                        src="https://players.brightcove.net/6100381025001/default_default/index.min.js"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Second Video -->
+                    <div class="col-md-6">
+                      
+                        <div style="max-width: 960px;">
+                            <video-js data-account="6100381025001" data-player="CF4Bp5NfF" data-embed="default" controls=""
+                                data-application-id="" class="vjs-16-9" data-video-id="6342512782112"></video-js>
+                        </div>
+                        <script src="https://players.brightcove.net/6100381025001/CF4Bp5NfF_default/index.min.js"></script>
+                        <br>
+                        <div style="max-width: 960px;">
+                            <video-js data-account="6100381025001" data-player="default" data-embed="default" controls="" data-application-id=""
+                                class="vjs-16-9" data-video-id="6342512782112"></video-js>
+                        </div>
+                        <script src="https://players.brightcove.net/6100381025001/default_default/index.min.js"></script>
+                    </div>
+                </div>
+             
+
+</html>
